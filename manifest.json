@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "GPT-S",
+  "author": "MR.3XFF",
+  "version": "1.0.5",
+  "description": "-",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs",
+    "notifications",
+    "webNavigation",
+    "webRequest",
+    "browsingData"
+  ],
+  "icons": {
+    "16": "1.png",
+    "48": "2.png",
+    "128": "3.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_ui": {
+    "page": "options.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://chat.openai.com/*"],
+      "css": ["style.css"],
+      "js": ["script.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

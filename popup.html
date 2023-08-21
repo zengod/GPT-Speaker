@@ -1,0 +1,46 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/html" lang="en">
+<head>
+    <title>Menu</title>
+    <style>
+        html, body {
+            background-image: linear-gradient(90deg, hsla(30, 84%, 58%, 1) 0, hsla(14, 93%, 53%, 1) 100%);
+        }
+        body * {
+            border: 1px solid black;
+            padding: 2px;
+        }
+        #main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            min-width: 50px;
+            padding: 2px;
+            font-weight: bold;
+            color: white;
+        }
+        #main > select {
+            padding: 10px;
+            border: none;
+            outline: none;
+            margin: 0 7px;
+        }
+    </style>
+    <script src="popup.js"></script>
+</head>
+<body>
+    <div id="main">
+        <label for="textToSpeech">GPT</label>
+        <input type="checkbox" id="textToSpeech">
+        <select id="lang">
+            <option value="ru-RU">RU</option>
+            <option value="en-US">EN</option>
+            <option value="de-DE">DE</option>
+        </select>
+        <input type="checkbox" id="speechToText">
+        <label for="speechToText">You</label>
+    </div>
+</body>
+</html>
+
